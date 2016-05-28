@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A Slack clone: a real-time communication tool built with React, Go, and RethinkDB.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "fecha": "^2.1.0"
+  },
   "devDependencies": {
     "babel-loader": "^5.3.3",
     "react": "^0.14.2",
@@ -17,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/roberttaraya/chatty.git"
   },
-  "author": "Robert Taraya",
+  "author": "Robert Taraya <robert.taraya@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/roberttaraya/chatty/issues"

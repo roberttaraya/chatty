@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import Channel from './channel.jsx';
 
 class ChannelList extends Component {
@@ -8,8 +8,9 @@ class ChannelList extends Component {
         return (
           <Channel
             channel={channel}
+            activeChannel={this.props.activeChannel}
+            handleSetChannel={this.props.handleSetChannel}
             key={channel.id}
-            {...this.props}
           />
         )
       })
@@ -27,8 +28,8 @@ class ChannelList extends Component {
 
 ChannelList.propTypes = {
   channels: PropTypes.array.isRequired,
-  handleSetChannel: PropTypes.func.isRequired,
   activeChannel: PropTypes.object.isRequired,
+  handleSetChannel: PropTypes.func.isRequired,
 };
 
 export default ChannelList

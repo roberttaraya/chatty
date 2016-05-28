@@ -1,0 +1,33 @@
+import React, { Component, PropTypes } from 'react';
+
+class UserForm extends Component {
+  handleOnSubmit(e) {
+    e.preventDefault();
+    const node = this.refs.userName;
+    const userName = node.value;
+    console.log(userName)
+    this.props.handleSetUserName(userName);
+    node.value = '';
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleOnSubmit.bind(this)}>
+        <div className='form-group'>
+          <input
+            className='form-control'
+            placeholder='Set Your Name...'
+            type='text'
+            ref='userName'
+          />
+        </div>
+      </form>
+    )
+  }
+}
+
+UserForm.propTyes = {
+  handleSetUserName: PropTypes.func.isRequired,
+};
+
+export default UserForm

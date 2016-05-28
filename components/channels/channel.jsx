@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class Channel extends Component {
   onClick(e) {
@@ -23,8 +23,8 @@ class Channel extends Component {
 
 Channel.propTypes = {
   channel: PropTypes.object.isRequired,
-  handleSetChannel: PropTypes.func.isRequired,
   activeChannel: PropTypes.object.isRequired,
+  handleSetChannel: PropTypes.func.isRequired,
 };
 
 export default Channel

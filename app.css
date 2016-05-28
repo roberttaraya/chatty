@@ -21,6 +21,10 @@
   margin-bottom: 0;
 }
 
+.panel, .panel-heading {
+  border-radius: 0px;
+}
+
 .channels, .users, .messages {
   display: flex;
   flex-direction: column;

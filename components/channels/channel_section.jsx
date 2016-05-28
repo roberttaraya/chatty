@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import ChannelForm from './channel_form.jsx';
 import ChannelList from './channel_list.jsx';
 
@@ -10,8 +10,14 @@ class ChannelSection extends Component {
           <strong>Channels</strong>
         </div>
         <div className='panel-body channels'>
-          <ChannelList {...this.props} />
-          <ChannelForm {...this.props} />
+          <ChannelList
+            channels={this.props.channels}
+            activeChannel={this.props.activeChannel}
+            handleSetChannel={this.props.handleSetChannel}
+          />
+          <ChannelForm
+            handleAddChannel={this.props.handleAddChannel}
+          />
         </div>
       </div>
     )
@@ -19,10 +25,10 @@ class ChannelSection extends Component {
 }
 
 ChannelSection.propTypes = {
-  channels: PropTypes.func.isRequired,
-  handleSetChannel: PropTypes.func.isRequired,
-  handleAddChannel: PropTypes.func.isRequired,
   activeChannel: PropTypes.object.isRequired,
+  channels: PropTypes.array.isRequired,
+  handleAddChannel: PropTypes.func.isRequired,
+  handleSetChannel: PropTypes.func.isRequired,
 };
 
 export default ChannelSection

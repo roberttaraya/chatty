@@ -1,11 +1,11 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class ChannelForm extends Component {
   handleCreateChannelName(e) {
     this.props.handleCreateChannelName(e.target.value)
   }
 
-  handleAddChannel(e) {
+  handleOnSubmit(e) {
     e.preventDefault();
     const node = this.refs.channel;
     const channelName = node.value;
@@ -15,7 +15,7 @@ class ChannelForm extends Component {
 
   render() {
     return(
-      <form onSubmit={this.handleAddChannel.bind(this)}>
+      <form onSubmit={this.handleOnSubmit.bind(this)}>
         <div className='form-group'>
           <input
             className='form-control'
