@@ -5,17 +5,17 @@ class ChannelForm extends Component {
     this.props.handleCreateChannelName(e.target.value)
   }
 
-  handleOnSubmit(e) {
+  onSubmit(e) {
     e.preventDefault();
     const node = this.refs.channel;
     const channelName = node.value;
-    this.props.handleAddChannel(channelName);
+    this.props.addChannel(channelName);
     node.value = '';
   }
 
   render() {
     return(
-      <form onSubmit={this.handleOnSubmit.bind(this)}>
+      <form onSubmit={this.onSubmit.bind(this)}>
         <div className='form-group'>
           <input
             className='form-control'
@@ -30,7 +30,7 @@ class ChannelForm extends Component {
 }
 
 ChannelForm.propTyes = {
-  handleAddChannel: PropTypes.func.isRequired,
+  addChannel: PropTypes.func.isRequired,
 };
 
 export default ChannelForm
