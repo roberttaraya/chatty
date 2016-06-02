@@ -21,6 +21,11 @@ Just like Channels, the Users and Messages components were divided into similar 
 
 ## Setup and Run App Locally
 ***WIP***
++ clone repo
++ `npm install`
++ start [server](https://github.com/roberttaraya/chatty_server)
++ `webpack-dev-server --port 4001`
++ go to `http://localhost:4001/` in your browser
 
 # TODO
 - [ ] Clientside Error Messages
