@@ -22,7 +22,7 @@ class MessageSection extends Component {
 MessageSection.propTypes = {
   messages: PropTypes.array.isRequired,
   activeChannel: PropTypes.object.isRequired,
-  handleAddMessage: PropTypes.func.isRequired,
+  addMessage: PropTypes.func.isRequired,
 };
 
 export default MessageSection

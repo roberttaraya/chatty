@@ -1,10 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
 class ChannelForm extends Component {
-  handleCreateChannelName(e) {
-    this.props.handleCreateChannelName(e.target.value)
-  }
-
   onSubmit(e) {
     e.preventDefault();
     const node = this.refs.channel;

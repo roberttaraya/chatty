@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 
 class MessageForm extends Component {
-  handleOnSubmit(e) {
+  onSubmit(e) {
     e.preventDefault();
     const node = this.refs.message;
     const messageName = node.value;
-    this.props.handleAddMessage(messageName);
+    this.props.addMessage(messageName);
     node.value = '';
   }
 
@@ -22,7 +22,7 @@ class MessageForm extends Component {
       )
     }
     return (
-      <form onSubmit={this.handleOnSubmit.bind(this)}>
+      <form onSubmit={this.onSubmit.bind(this)}>
         <div className='form-group'>
           {input}
         </div>
@@ -33,7 +33,7 @@ class MessageForm extends Component {
 
 MessageForm.propTyes = {
   activeChannel: PropTypes.object.isRequired,
-  handleAddMessage: PropTypes.func.isRequired,
+  addMessage: PropTypes.func.isRequired,
 };
 
 export default MessageForm

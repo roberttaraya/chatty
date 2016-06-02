@@ -1,18 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 
 class UserForm extends Component {
-  handleOnSubmit(e) {
+  onSubmit(e) {
     e.preventDefault();
     const node = this.refs.userName;
     const userName = node.value;
     console.log(userName)
-    this.props.handleSetUserName(userName);
+    this.props.setUserName(userName);
     node.value = '';
   }
 
   render() {
     return (
-      <form onSubmit={this.handleOnSubmit.bind(this)}>
+      <form onSubmit={this.onSubmit.bind(this)}>
         <div className='form-group'>
           <input
             className='form-control'
@@ -27,7 +27,7 @@ class UserForm extends Component {
 }
 
 UserForm.propTyes = {
-  handleSetUserName: PropTypes.func.isRequired,
+  setUserName: PropTypes.func.isRequired,
 };
 
 export default UserForm

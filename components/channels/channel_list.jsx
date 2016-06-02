@@ -8,8 +8,7 @@ class ChannelList extends Component {
         return (
           <Channel
             channel={channel}
-            activeChannel={this.props.activeChannel}
-            setChannel={this.props.setChannel}
+            {...this.props}
             key={channel.id}
           />
         )

@@ -1,7 +1,6 @@
 import EventEmitter from 'events';
 
 class Socket {
-
   constructor(ws = WebSocket(), ee = new EventEmitter()) {
     this.ws = ws;
     this.ee = ee;
@@ -25,7 +24,6 @@ class Socket {
     });
     this.ws.send(message);
   }
-
 
   message(e) {
     try {
